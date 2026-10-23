@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دانية، أميرتَي ♡</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 25px 12px;
+text-align: center;
+font-family: Georgia, serif;
+color: #fff0f5;
+background: linear-gradient(135deg, #160b19, #682440, #241020);
+overflow-x: hidden;
+}
+
+.card {
+position: relative;
+z-index: 1;
+width: 100%;
+max-width: 440px;
+padding: 32px 22px;
+border: 1px solid #f6b7cf;
+border-radius: 25px;
+background: rgba(255, 255, 255, 0.08);
+box-shadow: 0 0 35px #e85d9444;
+backdrop-filter: blur(8px);
+}
+
+.heart {
+font-size: 65px;
+animation: beat 1.2s infinite;
+}
+
+h1 {
+color: #ffc2d9;
+font-size: 32px;
+}
+
+h2 {
+color: #ffb5d0;
+font-size: 23px;
+}
+
+p {
+line-height: 2;
+font-size: 17px;
+}
+
+.subtitle {
+color: #f6c7d9;
+font-style: italic;
+}
+
+button {
+margin: 7px 4px;
+border: none;
+border-radius: 25px;
+padding: 13px 20px;
+background: #ffc2d9;
+color: #45162d;
+font-size: 16px;
+font-family: inherit;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+button:hover {
+transform: scale(1.05);
+}
+
+.secondary {
+background: #fff0f5;
+}
+
+.hidden {
+display: none;
+}
+
+#answer, #letter {
+margin-top: 20px;
+padding: 15px;
+border-radius: 15px;
+background: #ffffff12;
+color: #ffd6e5;
+line-height: 2;
+}
+
+.divider {
+color: #ffb5d0;
+margin: 22px 0;
+}
+
+.floating {
+position: fixed;
+bottom: -35px;
+z-index: 0;
+animation: rise 8s linear forwards;
+pointer-events: none;
+}
+
+@keyframes beat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.16); }
+}
+
+@keyframes rise {
+to {
+transform: translateY(-115vh) rotate(35deg);
+opacity: 0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<main class="card">
+
+<div class="heart">♡</div>
+
+<p class="subtitle">To my one and only princess...</p>
+
+<h1>دانية، أميرتي ♡</h1>
+
+<p>
+حبيبتي دانية،
+<br>
+أحبج أكثر من اي شي يعيوني
+<br>
+أنتِ ملاكي ..
+</p>
+
+<div class="divider">୨୧ ───── ♡ ───── ୨୧</div>
+
+<h2>My Dearest Danya</h2>
+
+<p>
+If the world were a sky full of stars,
+you would always be my favorite one.
+<br>
+If I could choose a thousand times,
+I would still choose you.
+<br>
+I love you, my princess.
+Today, tomorrow, and in every lifetime. ♡
+</p>
+
+<div class="divider">✧･ﾟ: ✧･ﾟ: ♡ :･ﾟ✧:･ﾟ✧</div>
+
+<h2>بس عندي سؤال إلج نمنم... 💌</h2>
+
+<p>هل تحبّينني؟ ♡</p>
+
+<button onclick="yesLove()">
+أكيد أحبج يا روحي! 💗
+</button>
+
+<button class="secondary" onclick="maybeLove()">
+خليني أبوسج أولاً ♡
+</button>
+
+<div id="answer" class="hidden"></div>
+
+<div class="divider">♡ ───────── ♡</div>
+
+<button onclick="openLetter()">
+افتحي رسالتج السرية 💌
+</button>
+
+<div id="letter" class="hidden">
+إلى نمنم كيوتي...
+
+<br><br>
+أحبجج أحبجج هوايي بيبي ! 
+أنتِ اجمل شي صار الي بحياتي 
+
+<br><br>
+
+وملاكي الجميلة.. أحبج واحب كلشي يخصج وأتمنى أكون أسعدتج بهديتي هاي ..
+
+<br><br>
+
+Forever yours. ♡
+</div>
+
+<p class="subtitle">
+Made with all my love, just for you, Danya. ♡
+</p>
+
+</main>
+
+<script>
+function yesLove() {
+const answer = document.getElementById("answer");
+answer.innerHTML =
+"هيهي جنت ادري💗<br>" +
+"وهسا لازم تجين لحضني بوبو♡";
+answer.classList.remove("hidden");
+celebrate();
+}
+
+function maybeLove() {
+const answer = document.getElementById("answer");
+answer.innerHTML =
+"تعالي الي حياتي..💕";
+answer.classList.remove("hidden");
+celebrate();
+}
+
+function openLetter() {
+document.getElementById("letter").classList.toggle("hidden");
+celebrate();
+}
+
+function celebrate() {
+for (let i = 0; i < 18; i++) {
+setTimeout(createHeart, i * 100);
+}
+}
+
+function createHeart() {
+const heart = document.createElement("div");
+heart.className = "floating";
+heart.textContent = ["♡", "♥", "💗", "✧"][ Math.floor(Math.random() * 4) ];
+heart.style.left = Math.random() * 100 + "vw";
+heart.style.fontSize = (16 + Math.random() * 20) + "px";
+document.body.appendChild(heart);
+
+setTimeout(() => heart.remove(), 8000);
+}
+
+setInterval(createHeart, 900);
+</script>
+
+</body>
+</html>
