@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أحبج ماما 💜</title>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+padding: 25px 14px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Tahoma, Arial, sans-serif;
+color: #fff5ff;
+text-align: center;
+background: linear-gradient(135deg, #170d2b, #59318a, #a779cf);
+overflow-x: hidden;
+}
+
+.card {
+width: 100%;
+max-width: 460px;
+padding: 30px 22px;
+border: 1px solid #e7c9ff;
+border-radius: 28px;
+background: rgba(255, 255, 255, 0.10);
+box-shadow: 0 0 35px #d5a5ff35;
+backdrop-filter: blur(8px);
+position: relative;
+z-index: 1;
+}
+
+.heart {
+font-size: 66px;
+animation: beat 1.3s infinite;
+}
+
+h1 {
+color: #f0d4ff;
+font-size: 32px;
+line-height: 1.7;
+}
+
+h2 {
+color: #f4ddff;
+font-size: 23px;
+line-height: 1.8;
+}
+
+p {
+font-size: 17px;
+line-height: 2.1;
+overflow-wrap: anywhere;
+}
+
+.english {
+direction: ltr;
+color: #ead5ff;
+font-family: Georgia, serif;
+letter-spacing: 1px;
+}
+
+.divider {
+color: #e9c8ff;
+margin: 23px 0;
+}
+
+button {
+border: 1px solid #efd8ff;
+border-radius: 25px;
+padding: 13px 20px;
+margin: 7px 4px;
+background: #e9d0ff;
+color: #3b2057;
+font-family: Tahoma, Arial, sans-serif;
+font-size: 16px;
+cursor: pointer;
+transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+transform: scale(1.05);
+background: #fff0ff;
+}
+
+.no-button {
+background: #69428d;
+color: white;
+}
+
+.hidden {
+display: none;
+}
+
+.message {
+padding: 16px;
+margin-top: 18px;
+border-radius: 18px;
+background: #ffffff13;
+border: 1px solid #e7c9ff55;
+color: #fff0ff;
+line-height: 2.2;
+animation: appear 0.5s ease;
+}
+
+.floating {
+position: fixed;
+bottom: -35px;
+z-index: 0;
+pointer-events: none;
+animation: rise 7s linear forwards;
+}
+
+@keyframes beat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.15); }
+}
+
+@keyframes rise {
+to {
+transform: translateY(-110vh) rotate(30deg);
+opacity: 0;
+}
+}
+
+@keyframes appear {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+<main class="card">
+
+<div class="heart">💜</div>
+
+<p class="english">A Little Love Letter</p>
+
+<h1>أحبج ماما 💜</h1>
+
+<p class="english">I love you, Mom.</p>
+
+<p>
+إلى أحنّ وأجمل ماما بالدنيا،
+<br>
+أنتِ مو بس أمي، أنتِ الأمان والحنان
+وأجمل نعمة ربي رزقني بيها.
+<br>
+أحبج هواي ماما الفقمة الظريفة ♡
+</p>
+
+<div class="divider">✧ ───── 💜 ───── ✧</div>
+
+<h2>ماما، أنتِ الأم الأفضل!</h2>
+
+<p>
+أنتِ دائماً وفرتِ إلنا السعادة،
+وخلّيتي الحياة أحلى بوجودج.
+<br>
+أني محظوظة بيج هواي،
+وربي لا يحرمني منج 
+ولا من ضحكتج وحنانج أبد.
+</p>
+
+<p class="english">You are the best mom ever. ♡</p>
+
+<div class="divider">♡ ───────── ♡</div>
+
+<h2>بس عندي سؤال الج ي مامي... 🥺</h2>
+
+<p>تحبيني؟ 💜</p>
+
+<button onclick="answerYes()">
+اييي أحبج ماما 💗
+</button>
+
+<button class="no-button" onclick="answerNo()">
+لا 😈
+</button>
+
+<div id="answer" class="message hidden"></div>
+
+<div class="divider">✧･ﾟ: ✧･ﾟ: 💜 :･ﾟ✧:･ﾟ✧</div>
+
+<button onclick="toggleLetter()">
+افتحي رسالتج السرية يا ماما 💌
+</button>
+
+<div id="letter" class="message hidden">
+<h2>إلى ماما الحلوة 💜</h2>
+
+ماما  أنتِ فقمتي الظريفة ! 🥹💗
+
+<br><br>
+
+يا أحلى ماما بالدنيا..
+أتمنى ايامج تكون كلها هادئة وما
+ بيها مشقة وتهون عليج وما تشوفين تعب
+ وتكونين بأفضل صحة ، ويخليج النه للابد
+
+<br><br>
+
+أنتِ الام والاب الي ولاخواني
+ ما قصرتي أبد وجنتي دائماً بطلتنا بهل قصة 
+
+<br><br>
+ف يارب الج دومة العمر ! احبجج هوايييي
+<br><br>
+
+<span class="english">
+I love you, Mom. You mean the world to me. 💜
+</span>
+
+<br><br>
+
+  ماما فقمتي الحلوة 💜
+</div>
+
+<p class="english">
+Made with love, just for you, Mom. ♡
+</p>
+
+</main>
+
+<script>
+function answerYes() {
+const box = document.getElementById("answer");
+
+box.textContent = "جنت أدري تحبيني فزت هيهي 💜😂";
+box.classList.remove("hidden");
+
+celebrate();
+}
+
+function answerNo() {
+const box = document.getElementById("answer");
+
+box.textContent = "ليش ماما .. أني أحبج هواي 💔🥺";
+box.classList.remove("hidden");
+
+celebrate();
+}
